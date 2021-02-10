@@ -1,0 +1,4 @@
+scripts:
+  start: deno run --allow-net --allow-env -c tsconfig.json src/main.ts
+  test: deno test --allow-net src/
+  format: deno fmt src/
