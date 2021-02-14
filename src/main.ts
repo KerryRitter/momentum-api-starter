@@ -3,4 +3,6 @@ import { platformOak } from "./deps.ts";
 
 const platform = await platformOak().bootstrapModule(AppModule);
 
-await platform.listen({ port: parseInt(Deno.env.get("PORT") ?? "3000") });
+const port = parseInt(Deno.env.get("PORT") ?? "3000");
+console.log(`Starting server at http://localhost:${port}...`);
+await platform.listen({ port });
